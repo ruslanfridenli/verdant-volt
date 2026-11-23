@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Verdant Volt — Portfolio Pilot</title><link rel="stylesheet" href="style.css"></head><body>
+<header><h1>◈ verdant volt — portfolio pilot</h1><nav class="lang"><button data-lang="en" class="on">EN</button><button data-lang="de">DE</button></nav></header>
+<main><aside class="panel">
+<section><h2 data-i="add">Add holding</h2>
+<label><span data-i="asset">Asset</span><select id="asset"><option>AAPL</option><option>MSFT</option><option>NVDA</option><option>TSLA</option></select></label>
+<label><span data-i="qty">Quantity</span><input type="number" id="qty" value="1" step="any" min="0"></label>
+<label><span data-i="cost">Avg cost</span><input type="number" id="cost" value="100" step="any" min="0"></label>
+<div class="btncol"><button id="add" class="primary" data-i="addbtn">+ Add</button></div></section>
+<section><h2 data-i="simulate">Simulation</h2>
+<label><span data-i="vol">Volatility</span><input type="range" id="vol" min="1" max="20" value="8"></label>
+<label><span data-i="drift">Drift %</span><input type="range" id="drift" min="-10" max="20" value="4"></label>
+<div class="btncol"><button id="tick" data-i="tick">⟳ Tick market</button><button id="reset" data-i="reset">↻ Reset</button></div></section>
+</aside><div class="stage"><div class="top">
+<div class="stat"><div class="label" data-i="value">Portfolio value</div><div class="big" id="value">$0</div><div class="delta" id="delta"></div></div>
+<div class="stat"><div class="label" data-i="pnl">Total P&L</div><div class="big" id="pnl">$0</div></div>
+<div class="stat"><div class="label" data-i="alloc">Allocation</div><canvas id="donut" width="120" height="120"></canvas></div>
+</div><canvas id="chart"></canvas><div id="rows"></div></div></main>
+<script src="app.js"></script></body></html>
